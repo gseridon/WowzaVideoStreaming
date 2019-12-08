@@ -1,19 +1,26 @@
 # WowzaVideoStreaming
-Wowza Video Streaming
 
-One Paragraph of project description goes here
+The Wowza Streaming Cloud allows live-streaming video service on a global cloud platform and API, using the Wowza GoCoder SDK.
+This is a simplified global streaming service, that allows the user to configure professional streams for an audience of anysize around the world. The streaming quality is auto-scaling to proactively adjust and solve issues, while providing high quality reliability and performance. With the use of the Wowza GoCoder SDK, the user can deploy a working live stream within minutes and allowing for a global platform that can deliver to audiences of any size.
 
-## Getting Started
-
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
 ### Prerequisites
 
 What things you need to install the software and how to install them
 
+Before getting started, there are a couple of programs that need to be installed:
+
 ```
-Give examples
+- <a href="https://developer.android.com/studio">Android Studip</a>
+- <a href="https://www.wowza.com/pricing/installer#gocodersdk-downloads">Wowza GoCoder SDK</a>
 ```
+
+In order to download the SDK, the user must sign up for a <a href="https://www.wowza.com/pricing/cloud-developer-free-trial">Wowza Streaming Free Trial</a>. This will allow the user to get their development license code, which will be used in the program code to enable the streaming platform.
+
+## Getting Started
+
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+
 
 ### Installing
 
