@@ -18,6 +18,15 @@ Before getting started, there are a couple of programs that need to be installed
 
 In order to download the SDK, the user must sign up for a <a href="https://www.wowza.com/pricing/cloud-developer-free-trial">Wowza Streaming Free Trial</a>. This will allow the user to get their development license code, which will be used in the program code to enable the streaming platform.
 
+The user should also set up a live stream beforehand, so that they will be able to input connection data into the code that will be needed later on. To set up a live stream:
+
+- Go to <a href="www.cloud.wowza.com">Wowza Streaming Cloud</a> and sign in your account
+- Click on livestreams on the menu bar and add a live stream
+- Provide a name for the livestream and select a location that is closest to where the user will be broadcasting from
+- Click next until the set-up is finished (these configurations will be default and can be changed later on
+- The newly created livestream page will contain information needed to connect the app to the live stream
+
+
 ### The Code
 
 The build instructions for the program can be found <a href="https://www.wowza.com/docs/how-to-build-a-basic-app-with-gocoder-sdk-for-android">here</a>.
@@ -47,16 +56,24 @@ dependencies {
 3. In the layout file (activity_main.xml), the camera preview is set to fill the entire screen, and a button is created to be the "Broadcast" button
 4. The AndroidManifest.xml is updated to reflect the activity orientation.
 5. Enable the sticky full-screen mode using the onWindowFocusChanged() method.
-6. 
+6. Member variables from the Wowza GoCoder Library are added.
+7. The GoCoder SDK is initialized using the registered license key. This will follow the onCreate method, and will need to use the license key that the user has received when registering for the SDK license.
+8. The onResume() and onRequestPermissionResult() methods are used to ask the user for permissions. This will ask for the camera and microphone permissions. hasPermissions() method will check the status of permissions granted by the user.
+9. Defines the view of the camera_preview
+10. Activates the camera preview when the app is brought to the foreground.
+11. Create an audio device instance for capturing and broadcasting audio
+12. Defines a broadcast object using WOWZBroadcast() method, and its connection properties are also defined
+    - The properties can be found when the user sets up a live stream, as mentioned in the prerequisites.
+    - Several methods are used to set the connection properties:
+        - setHostAddresss(): The IP address of the Wowza Streaming Engine Instance
+        - setPortNumber(): Port number used for the server connection
+        - setApplicationName(): Name of the livestreaming application, can be found on the primary server information
+        - setStreamName(): The given stream name by the website
+        - setUserName(): The given Source Username
+        - setPassword(): The given Source Password
+13. Broadcast monitoring callbacks are added, which is used to monitor the broadcast for status updates and errors. It uses a switch-case in order to handle different statuses of the broadcast.
+14. The callback invoked when the broadcast button is tapped. This will enable streaming when the broadcast button is pressed, or stops streaming when there is already an ongoing broadcast.
 
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
 
 ## Running the tests
 
