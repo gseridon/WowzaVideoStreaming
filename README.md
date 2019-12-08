@@ -10,10 +10,8 @@ What things you need to install the software and how to install them
 
 Before getting started, there are a couple of programs that need to be installed:
 
-```
 - <a href="https://developer.android.com/studio">Android Studip</a>
 - <a href="https://www.wowza.com/pricing/installer#gocodersdk-downloads">Wowza GoCoder SDK</a>
-```
 
 In order to download the SDK, the user must sign up for a <a href="https://www.wowza.com/pricing/cloud-developer-free-trial">Wowza Streaming Free Trial</a>. This will allow the user to get their development license code, which will be used in the program code to enable the streaming platform.
 
