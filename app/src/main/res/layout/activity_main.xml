@@ -8,6 +8,8 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <!-- TODO: 3. the camera preview is set to fill the entire screen, and a button is created to be the "Broadcast" button -->
+
     <!-- The camera preview display -->
     <com.wowza.gocoder.sdk.api.devices.WOWZCameraView
         android:layout_width="match_parent"

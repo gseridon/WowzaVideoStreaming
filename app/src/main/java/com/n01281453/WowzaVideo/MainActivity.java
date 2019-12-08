@@ -37,6 +37,8 @@ import static com.wowza.gocoder.sdk.api.status.WOWZBroadcastStatus.BroadcastStat
 public class MainActivity extends AppCompatActivity
         implements WOWZBroadcastStatusCallback, View.OnClickListener {
 
+    // TODO: 6. Member variables from the Wowza GoCoder Library are added.
+
     // The top-level GoCoder API interface
     private WowzaGoCoder goCoder;
 
@@ -66,6 +68,7 @@ public class MainActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // TODO: 7. The GoCoder SDK is initialized using the registered license key.
         // Initialize the GoCoder SDK
         goCoder = WowzaGoCoder.init(getApplicationContext(), "GOSK-3C47-010C-DF07-ED94-7457");
 
@@ -78,9 +81,10 @@ public class MainActivity extends AppCompatActivity
             return;
         }
 
-        // Create an audio device instance for capturing and broadcasting audio
+        // TODO: 11. Create an audio device instance for capturing and broadcasting audio
         goCoderAudioDevice = new WOWZAudioDevice();
 
+        // TODO: 9. Defines the view of the camera_preview
         // Associate the WOWZCameraView defined in the U/I layout with the corresponding class member
         goCoderCameraView = (WOWZCameraView) findViewById(R.id.camera_preview);
 
@@ -90,7 +94,7 @@ public class MainActivity extends AppCompatActivity
 
     }
 
-    //
+    // TODO: 5. Enable the sticky full-screen mode using the onWindowFocusChanged() method.
     // Enable Android's immersive, sticky full-screen mode
     //
     @Override
@@ -108,7 +112,7 @@ public class MainActivity extends AppCompatActivity
                             | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
     }
 
-    //
+    // TODO: 8. The onResume() and onRequestPermissionResult() methods will ask for camera and microphone permissions
     // Called when an activity is brought to the foreground
     //
     @Override
@@ -124,6 +128,7 @@ public class MainActivity extends AppCompatActivity
         } else
             mPermissionsGranted = true;
 
+        // TODO: 10. Activates the camera preview when the app is brought to the foreground
         // Start the camera preview display
         if (mPermissionsGranted && goCoderCameraView != null) {
             if (goCoderCameraView.isPreviewPaused())
@@ -132,6 +137,7 @@ public class MainActivity extends AppCompatActivity
                 goCoderCameraView.startPreview();
         }
 
+        // TODO: 12. Defines a broadcast object using WOWZBroadcast() method, and its connection properties are also defined
         // Create a broadcaster instance
         goCoderBroadcaster = new WOWZBroadcast();
 
@@ -184,7 +190,7 @@ public class MainActivity extends AppCompatActivity
         return true;
     }
 
-    //
+    // TODO: 13. Broadcast monitoring callbacks are added, which is used to monitor the broadcast for status updates and errors
     // The callback invoked upon changes to the state of the broadcast
     //
     @Override
@@ -236,7 +242,7 @@ public class MainActivity extends AppCompatActivity
     }
 
     //
-    // The callback invoked when the broadcast button is tapped
+    // TODO: 14. The callback invoked when the broadcast button is tapped
     //
     @Override
     public void onClick(View view) {
@@ -249,9 +255,6 @@ public class MainActivity extends AppCompatActivity
 
         if (configValidationError != null) {
             Toast.makeText(this, configValidationError.getErrorDescription(), Toast.LENGTH_LONG).show();
-        /*} else if (goCoderBroadcaster.getStatus().isBroadcasting()) {
-            // Stop the broadcast that is currently broadcasting
-            goCoderBroadcaster.endBroadcast(this); */
         } else {
             // Start streaming
             goCoderBroadcaster.startBroadcast(goCoderBroadcastConfig, this);

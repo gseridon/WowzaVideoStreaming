@@ -20,7 +20,7 @@ android {
 }
 
 // This enables Gradle to locate Android library dependencies in the same manner as jar-based dependencies. Add to the file before the dependencies.
-
+//TODO: 1. The SDK must be referenced in the build.gradle(Module: app)
 repositories {
     flatDir {
         dirs 'libs'

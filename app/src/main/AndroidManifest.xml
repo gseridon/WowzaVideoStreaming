@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.n01281453.WowzaVideo">
 
+    <!-- TODO: 2. Permissions must be added in the AndroidManifest.xml file in order to access some of the features -->
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -15,6 +16,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
+        <!-- TODO: 4. The AndroidManifest.xml is updated to reflect the activity orientation. -->
         <activity android:name=".MainActivity"
             android:configChanges="orientation|keyboardHidden|screenSize">
             <intent-filter>
