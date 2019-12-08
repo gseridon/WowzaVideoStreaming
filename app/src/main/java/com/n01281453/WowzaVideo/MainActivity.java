@@ -35,7 +35,7 @@ import static com.wowza.gocoder.sdk.api.status.WOWZBroadcastStatus.BroadcastStat
 // Main app activity class
 // Main app activity class
 public class MainActivity extends AppCompatActivity
-        implements WOWZBroadcastStatusCallback, View.OnClickListener, WOWZStatusCallback {
+        implements WOWZBroadcastStatusCallback, View.OnClickListener {
 
     // The top-level GoCoder API interface
     private WowzaGoCoder goCoder;
@@ -109,8 +109,8 @@ public class MainActivity extends AppCompatActivity
     }
 
     //
-// Called when an activity is brought to the foreground
-//
+    // Called when an activity is brought to the foreground
+    //
     @Override
     protected void onResume() {
         super.onResume();
@@ -249,22 +249,12 @@ public class MainActivity extends AppCompatActivity
 
         if (configValidationError != null) {
             Toast.makeText(this, configValidationError.getErrorDescription(), Toast.LENGTH_LONG).show();
-        } else if (goCoderBroadcaster.getStatus().isBroadcasting()) {
+        /*} else if (goCoderBroadcaster.getStatus().isBroadcasting()) {
             // Stop the broadcast that is currently broadcasting
-            goCoderBroadcaster.endBroadcast(this);
+            goCoderBroadcaster.endBroadcast(this); */
         } else {
             // Start streaming
             goCoderBroadcaster.startBroadcast(goCoderBroadcastConfig, this);
         }
-    }
-
-    @Override
-    public void onWZStatus(WOWZStatus wowzStatus) {
-
-    }
-
-    @Override
-    public void onWZError(WOWZStatus wowzStatus) {
-
     }
 }
