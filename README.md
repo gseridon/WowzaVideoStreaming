@@ -375,11 +375,11 @@ On the Wowza Streaming Cloud page, start the live stream. The user will be able 
 
 The broadcast preview should look like this, with the camera view updating every few seconds:
 
-<img scr="https://raw.githubusercontent.com/gseridon/WowzaVideoStreaming/master/Images/AssignmentOutputStream.png">
+<img src="https://raw.githubusercontent.com/gseridon/WowzaVideoStreaming/master/Images/AssignmentOutputStream.png">
 
 Checking the Stream Health Tab will show that the program is sending data continuously to the stream for the broadcast to occur:
 
-<img scr="https://raw.githubusercontent.com/gseridon/WowzaVideoStreaming/master/Images/AssignmentOutputStreamHealth.PNG">
+<img src="https://raw.githubusercontent.com/gseridon/WowzaVideoStreaming/master/Images/AssignmentOutputStreamHealth.PNG">
 
 
 ## References
