@@ -77,36 +77,19 @@ dependencies {
 
 ## Running Tests and Deployment 
 
-  
-
 On the Wowza Streaming Cloud page, start the live stream. The user will be able to monitor the stream using the statistics on the side, or using the Stream Health Tab. When the stream is up and running, run the program on Android Studio. Allow the device to access the camera and microphone, then click the "Broadcast" button. This will broadcast the camera view online.
 
-## Built With
+The broadcast preview should look like this, with the camera view updating every few seconds:
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+<img scr="https://raw.githubusercontent.com/gseridon/WowzaVideoStreaming/master/Images/AssignmentOutputStream.png">
 
-## Contributing
+Checking the Stream Health Tab will show that the program is sending data continuously to the stream for the broadcast to occur:
 
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
+<img scr="https://raw.githubusercontent.com/gseridon/WowzaVideoStreaming/master/Images/AssignmentOutputStreamHealth.PNG">
 
-## Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+## Sources
 
-## Authors
-
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+- <a href="https://developer.android.com/">Android Studio</a>
+- <a href="https://www.wowza.com/">Wowza Media Systems</a>
+- <a href="https://www.wowza.com/docs/how-to-build-a-basic-app-with-gocoder-sdk-for-android">App Build Instructions</a>.
