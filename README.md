@@ -75,29 +75,11 @@ dependencies {
 14. The callback invoked when the broadcast button is tapped. This will enable streaming when the broadcast button is pressed, or stops streaming when there is already an ongoing broadcast.
 
 
-## Running the tests
+## Running Tests and Deployment 
 
-Explain how to run the automated tests for this system
+  
 
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
+On the Wowza Streaming Cloud page, start the live stream. The user will be able to monitor the stream using the statistics on the side, or using the Stream Health Tab. When the stream is up and running, run the program on Android Studio. Allow the device to access the camera and microphone, then click the "Broadcast" button. This will broadcast the camera view online.
 
 ## Built With
 
